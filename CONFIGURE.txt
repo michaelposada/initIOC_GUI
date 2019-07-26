@@ -1,0 +1,63 @@
+#
+# Configuration file used for generating IOCs with initIOCs script.
+# All necessary unique elements are defined here in order to simplify deploying multiple NEW
+# IOCs to beamlines. Note that existing IOCs should be updated using https://github.com/epicsNSLS2-deploy/updateIOC
+#
+# Author: Jakub Wlodek
+# Created: May 2019
+#
+
+#------------MAIN CONFIGURATION-----------------
+
+# Top Level IOC directory (Where all your IOCs will be located)
+IOC_DIR=C:/epics/iocs
+
+
+# Top Level dir containing compiled binaries.
+TOP_BINARY_DIR=C:/epics
+
+
+# If base and support are in differet directories, set to NO, otherwise YES
+BINARIES_FLAT=NO
+
+
+# All Camera PVs will be $Prefix{$(IOC Type)-Cam:#}
+# Ex: XF:10IDC-BI{UVC-Cam:2}
+PREFIX=13SIM1:
+
+
+# Note that IOC type must have 'AD' at the start
+# IOC port will be injected into the config file for procServer
+# Cam Connection is a universal variable that is used to connect to the camera.
+# UVC - Serial or ProductID, Prosilica - IP, etc.
+
+# IOC Type    IOC Name        Asyn Port      IOC Port      Cam Connection
+#-------------------------------------------------------------------------
+
+          ADSimDetector   ca          AYNS1         40000         NA
+
+jk   jkj         jkj         jkj         jkj
+
+
+ADSimDetector  cam-sim1         SIM1           4000              NA
+#ADSimDetector  cam-sim2         SIM1           4001              NA
+#ADSimDetector  cam-sim3         SIM1           4002              NA
+#ADUVC         cam-uvc3         UVC1           4003             49490
+#ADProsilica   cam-ps1          PS1            4001          EX.AM.PLE.IP
+#ADAndor3      cam-andor3       AD3            4002          /exam/ple/path
+#ADPointGrey    cam-pg1          PG1             1000            1111111
+
+
+#------------ADDITIONAL CONFIGURATION-----------------
+
+# User or Engineer responsible for the IOC
+ENGINEER=J. Wlodek
+
+
+# Name of IOC host server (added to config file)
+HOSTNAME=localhost
+
+
+# Channel access address list IP
+CA_ADDRESS=127.0.0.255/n1
+
