@@ -503,20 +503,20 @@ class Window(Frame):
         
         w = Label(root, text = "")
 
-        w = Label(root, text="ioc_port").place(x=30,y=100)
+        w = Label(root, text="asyn_port").place(x=30,y=100)
 
         e3 = Entry(root,textvariable=v3).place(x=85, y=100)
 
         w = Label(root, text = "")
 
-        w = Label(root, text="connection").place(x=30,y=130)
+        w = Label(root, text="ioc_port").place(x=30,y=130)
 
         e4 = Entry(root,textvariable=v4).place(x=95,y=130)
 
         w = Label(root, text = "")
 
 
-        w = Label(root, text="ioc_num").place(x=30,y=160)
+        w = Label(root, text="connection").place(x=30,y=160)
 
         e5 = Entry(root,textvariable=v5).place(x=85,y=160)
 
@@ -577,66 +577,6 @@ class Window(Frame):
             fo.writelines(arr)
         fo.close()
         init_iocs()
-            
-        
-        
-
-
-    def advance_option(self):
-        w = Label(root, text="ioc_dir").place(x=30,y=190)
-
-
-        e6 = Entry(root).place(x=85,y=190)
-
-
-        w = Label(root, text = "")
-
-
-        w = Label(root, text="top_binary_dir").place(x=30,y=210)
-
-        
-        e7 = Entry(root).place(x=115,y=210)
-
-        
-        w = Label(root, text = "")
-
-
-        w = Label(root, text="binaries_flat").place(x=30,y=240)
-
-
-        e8 = Entry(root).place(x=115,y=240)
-
-
-        w = Label(root, text = "")
-
-
-        w = Label(root, text="engineer").place(x=30,y=270)
-
-
-        e9 = Entry(root).place(x=90,y=270)
-
-
-        w = Label(root, text = "")
-
-
-        w = Label(root, text="prefix").place(x=30,y=300)
-
-        e10 = Entry(root).place(x=90,y=300)
-
-        w = Label(root, text = "")
-
-        w = Label(root, text="hostname").place(x=30,y=330)
-
-        e11 = Entry(root).place(x=100,y=330)
-
-        w = Label(root, text = "")
-
-        w = Label(root, text="ca_address").place(x=30,y=360)
-        
-        e12 = Entry(root).place(x=90,y=360)
-        
-        w = Label(root, text = "")
-
 
 
 
